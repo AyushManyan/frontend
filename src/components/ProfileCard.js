@@ -47,7 +47,7 @@ export default function ProfileCard() {
                 </div>
                 <div className='text-center'>
                     <h1 className='text-xl font-bold'>
-                        {user?.name ? user?.name : 'You Haven\'t Logged In'}
+                        {user?.name? user.name : 'You Haven\'t Logged In'}
 
                     </h1>
 

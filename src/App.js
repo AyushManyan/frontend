@@ -20,6 +20,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import ProfileCard from './components/ProfileCard';
 import 'react-toastify/dist/ReactToastify.css';
 import CoursePage from './pages/CoursePage';
+import AIPage from './pages/AIPage';
 function App() {
   return (
     <>
@@ -29,7 +30,6 @@ function App() {
       
     <div className={`grid-cols-1 grid md:grid-cols-4 gap-8 m-0 h-full p-4  fixed w-full `} style={{ height: '100%' }}>
       <div className='hidden md:block gap-4 col-span-1'>
-        {/* profile and nav */}
         <ProfileCard />
         <NavCard />
       </div>
@@ -44,6 +44,7 @@ function App() {
         <Route path="/navcard" element={<NavCard />}/>
         <Route path="/quiz" element={<Quiz />}/>
         <Route path="/course/:courseId" element={<CourseDetailPage />} />
+        <Route path="/ai" element={<AIPage />} />
 
       </Routes>
       <ToastContainer />
