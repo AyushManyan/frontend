@@ -26,7 +26,7 @@ export default function Notes() {
     }
 
     try {
-      const res = await fetch('https://backend-1ndv.onrender.com/api/addnote', {
+      const res = await fetch('http://localhost:4000/api/addnote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export default function Notes() {
   }
   const fetchNotes = async () => {
     try {
-      const res = await fetch('https://backend-1ndv.onrender.com/api/notes', {
+      const res = await fetch('http://localhost:4000/api/notes', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -75,8 +75,13 @@ export default function Notes() {
   const [title, setTitle] = useState("");
   return (
     <>
-        <div className="mx-auto w-full px-24 flex-col justify-center align-middle gap-4 col-span-3 h-full shadow-lg mr-5">
-          <div className="w-full mb-8">
+        <div className="mx-auto w-full px-24 flex-col justify-center align-middle gap-4 col-span-3 shadow-lg mr-5 overflow-y-auto"
+        style={{
+          scrollbarWidth: 'none',
+          height: '80vh'
+      }}
+        >
+          <div className="w-full mb-8 ">
             <h3>Type Your Notes : </h3>
 
             <input type="text" className="w-full my-2 p-2 mx-auto border-1 shadow-lg"

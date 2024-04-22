@@ -55,7 +55,7 @@ export default function CoursePage() {
                         >
 
                             {courses.map((course) => (
-                                <CourseCard key={course._id} course={course} />
+                                <CourseCard key= {course._id} course={course} />
                             ))}
                         </div>
                     </>
